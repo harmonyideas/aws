@@ -1,1 +1,23 @@
 
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:*",
+        "s3:*",
+        "rds:*",
+        "iam:CreateRole",
+        "iam:AttachRolePolicy",
+        "iam:DeleteRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Deny",
+      "Action": "*",
+      "Resource": ["arn:aws:iam::<ACCOUNT_ID>:role/*", "arn:aws:iam::<ACCOUNT_ID>:user/*"]
+    }
+  ]
+}
