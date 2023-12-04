@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "s3:DeleteBucket",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Resource": [
+        "arn:aws:s3:::BUCKET_NAME"
+      ]
+    },
+    {
+      "Action": "s3:DeleteObject",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Resource": [
+        "arn:aws:s3:::BUCKET_NAME/*"
+      ]
+    }
+  ]
+}
