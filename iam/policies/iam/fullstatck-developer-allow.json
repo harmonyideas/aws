@@ -1,0 +1,102 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+   {
+      "Sid": "FullStackDeveloperAllow",
+      "Action": [
+        "s3:*",
+        "sns:*",
+        "sqs:*",
+        "cloudfront:*",
+        "ec2:*",
+        "lambda:*",
+        "rds:*",
+        "s3:*",
+        "dynamodb:*",
+        "cloudsearch:*",
+        "es:*",
+        "logs:*",
+        "apigateway:*",
+        "cloudtrail:*",
+        "kms:*",
+        "elasticloadbalancing:*",
+        "elasticbeanstalk:*",
+        "sts:*",
+        "ses:*",
+        "cognito:*",
+        "cloudfront:*",
+        "route53:*",
+        "xray:*",
+        "states:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "workplace_ip_address_here"
+        }
+      }
+    },
+    ,
+    {
+      "Sid": "EC2FullStackDeveloperAllow",
+      "Action": [
+        "ec2:StopInstances",
+        "ec2:TerminateInstances"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3FullStackDeveloperAllow",
+      "Action": [
+        "s3:DeleteBucket"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    },
+    {
+      "Sid": "LambdaFullStackDeveloperAllow",
+      "Action": [
+        "lambda:DeleteFunction"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    },
+    {
+      "Sid": "rdsFullStackDeveloperAllow",
+      "Action": [
+        "rds:DeleteDBCluster",
+        "rds:DeleteDBInstance"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    },
+    {
+      "Sid": "elbFullStackDeveloperAllow",
+      "Action": [
+        "elasticloadbalancing:DeleteLoadBalancer"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    },
+    {
+      "Sid": "r53FullStackDeveloperAllow",
+      "Action": [
+        "route53:DeleteHealthCheck",
+        "route53:DeleteHostedZone",
+        "route53:DeleteTrafficPolicy"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    },
+    {
+      "Sid": "cfFullStackDeveloperAllow",
+      "Action": [
+        "cloudfront:DeleteDistribution"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    }
+  ]
+}
