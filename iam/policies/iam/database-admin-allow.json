@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "dbAdminAllow",
+      "Action": [
+        "rds:*",
+        "redshift:*",
+        "s3:*",
+        "dynamodb:*",
+        "sdb:*",
+        "sns:*",
+        "sqs:*",
+        "cloudsearch:*",
+        "es:*",
+        "logs:*",
+        "xray:*",
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "workplace_ip_address_here"
+        }
+      }
+    },
+    {
+      "Sid": "s3dbAdminAllow",
+      "Action": [
+        "s3:DeleteBucket"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    }
+  ]
+}
