@@ -11,3 +11,4 @@ s3-bucket-enforce-ssl-requests.json | Bucket enforce SSL requests only | bucket
 s3-bucket-full-access-iam.json | Full access (and S3 console) for specific IAM users | user/group/role
 s3-bucket-origin-access-control-get.json | CloudFront origin access control (OAC) GET access | bucket
 s3-bucket-restrict-list-put-delete-path.json | Restricted LIST & PUT/DELETE access to specific path within a bucket | user/group/role
+s3-bucket-using-mfa.json | Bucket Policy to Require MFA
