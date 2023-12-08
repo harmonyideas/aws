@@ -1,0 +1,37 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DataScientistAllow",
+      "Action": [
+        "rds:*",
+        "redshift:*",
+        "s3:*",
+        "dynamodb:*",
+        "kinesis:*",
+        "elasticmapreduce:*",
+        "datapipeline:*",
+        "sdb:*",
+        "sns:*",
+        "sqs:*",
+        "logs:*",
+        "athena:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "workplace_ip_address_here"
+        }
+      }
+    },
+    {
+      "Sid": "S3DataScientistAllow",
+      "Action": [
+        "s3:DeleteBucket"
+      ],
+      "Effect": "Deny",
+      "Resource": "*"
+    }
+  ]
+}
