@@ -2,7 +2,7 @@
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "Stmt1502902212539",
+      "Sid": "AllowAll",
       "Action": "*",
       "Effect": "Allow",
       "Resource": "*",
