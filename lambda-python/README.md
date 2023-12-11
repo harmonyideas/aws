@@ -1,7 +1,7 @@
 # AWS/lambda-python repo
 This project contains a collection of lambda python scripts. 
 
-DirName      | Description
+File Name      | Description
 ------------- | -------------  
 kinesis-event-to-s3.py | extract data from kinesis and upload to s3
 s3-event-to-kinesis.py | s3 event notification convert to kinesis data
