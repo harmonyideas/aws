@@ -6,3 +6,4 @@ File Name      | Description
 kinesis-event-to-s3.py | extract data from kinesis and upload to s3
 s3-event-to-kinesis.py | s3 event trigger convert to kinesis data
 s3-csv-to-dynamo.py | access s3 csv file and import into dynamodb
+transform-record.py | transform record and output new object
