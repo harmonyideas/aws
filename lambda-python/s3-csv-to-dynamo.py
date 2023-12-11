@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         # Handle missing values
         for i, value in enumerate(values):
             if not value:
-                value = '5'
+                value = 'default_value'
             key = keys[i]
             item[key] = int(value) if key == 'my_id' else value
 
